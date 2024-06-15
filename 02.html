@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega_02_2</title>
+</head>
+
+<body>
+    <p id="texto_cantidad" style="display: flex; justify-content: center; margin-top: 15rem;">Cantidad de items</p>
+    <div style="display: flex; justify-content: space-around;">
+
+        <!-- Sticker #1 -->
+        <div>
+            <div style="width: 10rem; height: 10rem; background-image: url(./assets/img/HTML.png); background-size: cover;">
+
+            </div>
+            <input id="st1" type="Cantidad">
+        </div>
+        <!-- Sticker #2 -->
+
+        <div>
+            <div style="width: 10rem; height: 10rem; background-image: url(./assets/img/You-Are-The-Css-Sticker-2-500x500.png); background-size: cover;">
+
+            </div>
+            <input id="st2" type="Cantidad">
+        </div>
+
+        <!-- Sticker #3 -->
+        <div>
+            <div style="width: 10rem; height: 10rem; background-image: url(./assets/img/Unofficial_JavaScript_logo_2.svg.png); background-size: cover;">
+
+            </div>
+            <input id="st3" type="Cantidad">
+        </div>
+
+        <button onclick="
+        inputst1 = document.querySelector('#st1')
+        valst1 = Number(inputst1.value)
+        inputst2 = document.querySelector('#st2')
+        valst2 = Number(inputst2.value)
+        inputst3 = document.querySelector('#st3')
+        valst3 = Number(inputst3.value)
+        sumastickers = valst1 + valst2 + valst3
+        if(sumastickers <= 10){
+            ptexto = document.querySelector('#texto_cantidad')
+            ptexto.innerHTML = valst1 + valst2 + valst3
+        }
+        else{
+            ptexto = document.querySelector('#texto_cantidad')
+            ptexto.innerHTML = 'Llevas demasiados stickers'
+        }
+        "></button>
+    </div>
+
+    <p>Enlaces a otros ejercicios</p>
+<a href="./index.html">Ejercicio #1 JS</a>
+<br>
+<a href="./03.html">Ejercicio #3 JS</a>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

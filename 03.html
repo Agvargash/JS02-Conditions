@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega_02_3</title>
+</head>
+<body>
+
+    <p style="display: flex; justify-content: center; margin-top: 10rem;">Ingresa la contraseña</p>
+    <div style="display: flex; justify-content: center; margin-top: 1rem;">
+    <select style="width: 10rem;" name="val1" id="selec1">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+
+    <select style="width: 10rem;" name="val2" id="selec2">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+
+    <select style="width: 10rem;" name="val3" id="selec3">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+</div>
+
+<button style="margin-left: 47%; margin-top: 2rem;" onclick="
+selector1 = document.querySelector('#selec1')
+valor1 = (selector1).value
+console.log(valor1)
+selector2 = document.querySelector('#selec2')
+valor2 = (selector2).value
+console.log(valor2)
+selector3 = document.querySelector('#selec3')
+valor3 = (selector3).value
+console.log(valor3)
+
+password = valor1 + valor2 + valor3
+console.log(password)
+
+passwp = document.querySelector('#pass')
+passwp.innerHTML = password
+
+if(password == 911){
+verival = document.querySelector('#verif')
+verival.innerHTML = 'password 1 correcta'
+}
+else if(password == 714){
+verival = document.querySelector('#verif')
+verival.innerHTML = 'password 2 correcta'
+}
+else{
+verival = document.querySelector('#verif')
+verival.innerHTML = 'password incorrecto'
+}
+
+
+">Ingresar</button>
+<p style="display: flex; justify-content: center; margin-top: 1rem;">Password: <span id="pass"></span></p>
+<p id="verif" style="display: flex; justify-content: center; margin-top: 1rem;"></p>
+
+<p>Enlaces a otros ejercicios</p>
+<a href="./index.html">Ejercicio #1 JS</a>
+<br>
+<a href="./02.html">Ejercicio #2 JS</a>
+
+</body>
+</html>
